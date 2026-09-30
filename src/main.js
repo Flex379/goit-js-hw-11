@@ -16,6 +16,10 @@ function onFormSubmit(event) {
 
   const userSearch = event.target.elements['search-text'].value;
 
+  if (userSearch.trim().length === 0) {
+    return;
+  }
+
   clearGallery();
 
   showLoader();
