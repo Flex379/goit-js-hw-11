@@ -24,5 +24,5 @@ import{a as f,S as d,i as l}from"./assets/vendor-B4VkUtbg.js";(function(){const 
       <span></span>
     </p>
   </div>
-</li>`).join("");n.gallery.innerHTML=t,m.refresh()}function h(){n.gallery.innerHTML=""}function g(){n.loader.classList.add("is-active")}function L(){n.loader.classList.remove("is-active")}n.form.addEventListener("submit",b);function b(o){o.preventDefault();const t=o.target.elements["search-text"].value;h(),g(),p(t).then(s=>{s.hits.length!==0?y(s.hits):l.error({message:"Sorry, there are no images matching your search query. Please try again!"})}).catch(()=>{l.error({message:"Ошибка сервера"})}).finally(()=>{L()})}
+</li>`).join("");n.gallery.innerHTML=t,m.refresh()}function h(){n.gallery.innerHTML=""}function g(){n.loader.classList.add("is-active")}function L(){n.loader.classList.remove("is-active")}n.form.addEventListener("submit",b);function b(o){o.preventDefault();const t=o.target.elements["search-text"].value;t.trim().length!==0&&(h(),g(),p(t).then(s=>{s.hits.length!==0?y(s.hits):l.error({message:"Sorry, there are no images matching your search query. Please try again!"})}).catch(()=>{l.error({message:"Ошибка сервера"})}).finally(()=>{L()}))}
 //# sourceMappingURL=index.js.map
